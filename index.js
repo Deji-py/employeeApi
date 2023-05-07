@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const employeesRoutes = require("./routes/employeesRoutes");
 const app = express();
 
+
+app.use(cors())
 app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
